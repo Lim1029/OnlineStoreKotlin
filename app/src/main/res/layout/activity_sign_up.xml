@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Username: "
+        android:drawableEnd="@drawable/person"
+        android:drawableRight="@drawable/person"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/edtEmailSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email: "
+        android:drawableEnd="@drawable/email_icon"
+        android:drawableRight="@drawable/email_icon"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/edtPasswordSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Password: "
+        android:drawableEnd="@drawable/lock_icon"
+        android:drawableRight="@drawable/lock_icon"
+        android:inputType="textPassword"/>
+    <EditText
+        android:id="@+id/edtPasswordConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm password: "
+        android:drawableEnd="@drawable/lock_icon"
+        android:drawableRight="@drawable/lock_icon"
+        android:inputType="textPassword"/>
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Sign Up"/>
+    <TextView
+        android:id="@+id/txtLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:layout_gravity="center"/>
+</LinearLayout>
