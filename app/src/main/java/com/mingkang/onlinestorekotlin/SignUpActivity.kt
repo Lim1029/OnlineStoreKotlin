@@ -1,5 +1,6 @@
 package com.mingkang.onlinestorekotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
@@ -25,16 +26,20 @@ class SignUpActivity : AppCompatActivity() {
                 val requestQ = Volley.newRequestQueue(this@SignUpActivity)
                 val stringRequest = StringRequest(Request.Method.GET, URL,
                     Response.Listener { response ->
-                        if(response.equals("A user with this Email Address already exists")) {
+                        if(response == "A user with this Email Address already exists") {
                             val dialogBuilder = AlertDialog.Builder(this)
                             dialogBuilder.setTitle("Alert")
                             dialogBuilder.setMessage(response)
                             dialogBuilder.create().show()
                         } else {
+                            Person.email = edtEmailSignUp.text.toString()
                             val dialogBuilder = AlertDialog.Builder(this)
                             dialogBuilder.setTitle("Alert")
                             dialogBuilder.setMessage(response)
                             dialogBuilder.create().show()
+                            val homeIntent = Intent(this@SignUpActivity,HomeScreen::class.java)
+                            startActivity(homeIntent)
+                            finish()
                         }
                     },
                     Response.ErrorListener { error ->
