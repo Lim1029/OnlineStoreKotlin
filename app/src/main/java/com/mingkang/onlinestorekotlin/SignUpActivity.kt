@@ -19,7 +19,7 @@ class SignUpActivity : AppCompatActivity() {
 
         btnSignUp.setOnClickListener {
             if(edtPasswordSignUp.text.toString().equals(edtPasswordConfirm.text.toString())){
-                val URL = "http://192.168.43.132/OnlineStoreApp/join_new_user.php?" +
+                val URL = "http://192.168.137.251/OnlineStoreApp/join_new_user.php?" +
                         "email=" + edtEmailSignUp.text.toString()+
                         "&username=" + edtUsername.text.toString()+
                         "&password=" + edtPasswordSignUp.text.toString()

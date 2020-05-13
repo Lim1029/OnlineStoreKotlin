@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnLogIn.setOnClickListener{
-            val URL = "http://192.168.43.132/OnlineStoreApp/login_app_user.php?email=" +
+            val URL = "http://192.168.137.251/OnlineStoreApp/login_app_user.php?email=" +
                     edtEmail.text.toString() + "&password=" + edtPassword.text.toString()
             val requestQ = Volley.newRequestQueue(this@MainActivity)
             val stringRequest = StringRequest(Request.Method.DELETE, URL,
